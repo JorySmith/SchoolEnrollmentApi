@@ -8,6 +8,7 @@ using System.Reflection.Metadata;
 
 namespace SchoolEnrollmentApi.Controllers
 {
+    // api/Students
     [Route("api/[controller]")]
     [ApiController]
     public class StudentsController : ControllerBase
@@ -20,7 +21,7 @@ namespace SchoolEnrollmentApi.Controllers
             this.context = context;
         }
 
-        // GET: api/<StudentsController>
+        // GET: api/Students
         [HttpGet]
         //public IEnumerable<string> Get()
         public async Task<ActionResult<IEnumerable<Student>>> Get()
@@ -29,7 +30,7 @@ namespace SchoolEnrollmentApi.Controllers
             return students;
         }
 
-        // GET api/<StudentsController>/5
+        // GET api/Students/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> Get(int? id)
         {         
@@ -42,19 +43,19 @@ namespace SchoolEnrollmentApi.Controllers
             return result;
         }
 
-        // POST api/<StudentsController>
+        // POST api/Students
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<StudentsController>/5
+        // PUT api/Students/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<StudentsController>/5
+        // DELETE api/Students/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
