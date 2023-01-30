@@ -1,8 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SchoolEnrollmentApi.Models
-{
-    //[Table("Student")]
+{    
     public class Student
     {
         public int ID { get; set; }
@@ -10,7 +9,7 @@ namespace SchoolEnrollmentApi.Models
         public string FirstMidName { get; set; }
         public DateTime EnrollmentDate { get; set; }
 
-        // Navigation prop of foreign entity
+        // Navigation prop of foreign entity collection
         public ICollection<Enrollment> Enrollments { get; set; }
     }
 }

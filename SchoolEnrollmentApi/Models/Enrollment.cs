@@ -7,8 +7,7 @@ namespace SchoolEnrollmentApi.Models
     {
         A, B, C, D, F
     }
-
-    //[Table("Enrollment")]
+    
     public class Enrollment
     {
         public int EnrollmentID { get; set; }
@@ -17,7 +16,7 @@ namespace SchoolEnrollmentApi.Models
         [DisplayFormat(NullDisplayText = "No grade")]
         public Grade? Grade { get; set; }
 
-        // Navigation props
+        // Navigation props of foreign entities
         public Course Course { get; set; }
         public Student Student { get; set; }
     }
